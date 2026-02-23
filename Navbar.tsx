@@ -38,16 +38,6 @@ export default function Navbar() {
           className="flex items-center gap-2 flex-shrink-0"
           style={{ textDecoration: "none" }}
         >
-          <div
-            className="w-9 h-9 rounded-full flex items-center justify-center overflow-hidden flex-shrink-0 border-2"
-            style={{ borderColor: "#FF2D78" }}
-          >
-            <img
-              src="/kalimero-logo.jpg"
-              alt="Kalimero Logo"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          </div>
           <span
             className="font-bold text-sm hidden sm:block"
             style={{

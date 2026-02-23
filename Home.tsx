@@ -476,22 +476,6 @@ export default function Home() {
             Ecce Kalimero
           </h2>
 
-          {/* Logo Kalimero */}
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: "2rem" }}>
-            <img
-              src="/kalimero-logo.jpg"
-              alt="Kalimero Von Bülow"
-              style={{
-                width: "160px",
-                height: "160px",
-                borderRadius: "50%",
-                objectFit: "cover",
-                border: "3px solid #FF2D78",
-                boxShadow: "0 0 30px rgba(255, 45, 120, 0.4)",
-              }}
-            />
-          </div>
-
           <p
             style={{
               fontSize: "1.1rem",
