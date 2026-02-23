@@ -7,10 +7,10 @@
  * Mode: sombre uniquement
  */
 
-import CarouselSection from "@/components/CarouselSection";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import StarfieldCanvas from "@/components/StarfieldCanvas";
+import CarouselSection from "./CarouselSection";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import StarfieldCanvas from "./StarfieldCanvas";
 import { useEffect, useRef, useState } from "react";
 
 // Image locale — fichier à placer dans /public/hero.webp
@@ -738,4 +738,3 @@ export default function Home() {
     </div>
   );
 }
-fa
