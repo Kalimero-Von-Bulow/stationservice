@@ -1,17 +1,12 @@
-/*
- * DESIGN: Underground Punk Zine
- * Navbar fixe, fond noir, liens en rose au hover
- * Logo Kalimero à gauche, liens de navigation à droite
- */
-
 import { useState } from "react";
 
-const navLinks = [
+type NavLink = { label: string; href: string | null; external: boolean };
+
+const navLinks: NavLink[] = [
   { label: "Yam What Yam", href: "https://yamwhatyam.vercel.app/", external: true },
   { label: "Picaboo", href: "https://picaboo.vercel.app/", external: true },
   { label: "Nest In Pace", href: "https://nest-in-pace.vercel.app/", external: true },
   { label: "Rock, Ghost, Rock !", href: "https://rockghostsrock.digitalpress.blog/", external: true },
-  // TODO: remplacer les liens ci-dessous par les vraies URLs quand disponibles
   { label: "Chronic", href: null, external: false },
   { label: "Rayon X", href: null, external: false },
   { label: "PRNGRFX", href: "https://xxx19.digitalpress.blog/", external: true },
@@ -23,116 +18,114 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 border-b"
-      style={{
-        backgroundColor: "rgba(10,10,10,0.95)",
-        borderColor: "rgba(255,255,255,0.1)",
-        backdropFilter: "blur(8px)",
-      }}
-    >
-      <div className="flex items-center justify-between px-4 h-12">
-        {/* Logo */}
-        <a
-          href="/"
-          className="flex items-center gap-2 flex-shrink-0"
-          style={{ textDecoration: "none" }}
-        >
-          <span
-            className="font-bold text-sm hidden sm:block"
-            style={{
-              fontFamily: "'Space Mono', monospace",
-              color: "#FF2D78",
-              letterSpacing: "0.05em",
-            }}
+    <>
+      <style>{`
+        .nav-wrapper {
+          position: fixed;
+          top: 0; left: 0; right: 0;
+          z-index: 50;
+          background: rgba(10,10,10,0.95);
+          border-bottom: 1px solid rgba(255,255,255,0.1);
+          backdrop-filter: blur(8px);
+        }
+        .nav-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 1.2rem;
+          height: 52px;
+        }
+        .nav-logo {
+          font-family: 'Space Mono', monospace;
+          color: #FF2D78;
+          font-weight: 700;
+          font-size: 1rem;
+          text-decoration: none;
+          letter-spacing: 0.05em;
+          flex-shrink: 0;
+        }
+        .nav-burger {
+          background: none;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          padding: 8px;
+        }
+        .nav-burger span {
+          display: block;
+          width: 22px;
+          height: 2px;
+          background: white;
+          border-radius: 2px;
+        }
+        .nav-mobile-menu {
+          border-top: 1px solid rgba(255,255,255,0.1);
+          background: rgba(10,10,10,0.98);
+          padding: 0.75rem 1.2rem 1.2rem;
+        }
+        .nav-mobile-link {
+          display: block;
+          padding: 0.75rem 0;
+          border-bottom: 1px solid rgba(255,255,255,0.07);
+          color: rgba(255,255,255,0.85);
+          text-decoration: none;
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+        .nav-mobile-link:last-child {
+          border-bottom: none;
+        }
+        .nav-mobile-link.disabled {
+          color: rgba(255,255,255,0.25);
+          cursor: not-allowed;
+        }
+      `}</style>
+
+      <nav className="nav-wrapper">
+        <div className="nav-inner">
+          <a href="/" className="nav-logo">Kalimero</a>
+          <button
+            className="nav-burger"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+            aria-expanded={menuOpen}
           >
-            Kalimero
-          </span>
-        </a>
-
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-1 overflow-x-auto">
-          {navLinks.map((link) =>
-            link.href ? (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                className="nav-link px-2 py-1 whitespace-nowrap text-xs"
-                style={{
-                  color: "rgba(255,255,255,0.8)",
-                  textDecoration: "none",
-                  fontFamily: "'Space Grotesk', sans-serif",
-                }}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <span
-                key={link.label}
-                className="px-2 py-1 whitespace-nowrap text-xs"
-                title="Bientôt disponible"
-                style={{
-                  color: "rgba(255,255,255,0.3)",
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  cursor: "not-allowed",
-                }}
-              >
-                {link.label}
-              </span>
-            )
-          )}
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          className="lg:hidden w-8 h-8 flex flex-col items-center justify-center gap-1"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Ouvrir le menu"
-          aria-expanded={menuOpen}
-        >
-          <span className="block w-5 h-0.5 transition-all" style={{ backgroundColor: "white" }} />
-          <span className="block w-5 h-0.5 transition-all" style={{ backgroundColor: "white" }} />
-          <span className="block w-5 h-0.5 transition-all" style={{ backgroundColor: "white" }} />
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {menuOpen && (
-        <div
-          className="lg:hidden border-t px-4 py-3 flex flex-col gap-2"
-          style={{
-            backgroundColor: "rgba(10,10,10,0.98)",
-            borderColor: "rgba(255,255,255,0.1)",
-          }}
-        >
-          {navLinks.map((link) =>
-            link.href ? (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                className="nav-link py-1 text-sm"
-                style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ) : (
-              <span
-                key={link.label}
-                className="py-1 text-sm"
-                title="Bientôt disponible"
-                style={{ color: "rgba(255,255,255,0.3)", cursor: "not-allowed" }}
-              >
-                {link.label}
-              </span>
-            )
-          )}
-        </div>
-      )}
-    </nav>
+        {menuOpen && (
+          <div className="nav-mobile-menu">
+            {navLinks.map((link) =>
+              link.href ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                  className="nav-mobile-link"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <span
+                  key={link.label}
+                  className="nav-mobile-link disabled"
+                  title="Bientôt disponible"
+                >
+                  {link.label}
+                </span>
+              )
+            )}
+          </div>
+        )}
+      </nav>
+    </>
   );
 }
