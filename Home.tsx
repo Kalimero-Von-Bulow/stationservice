@@ -280,7 +280,7 @@ export default function Home() {
         ref={picabooRef.ref}
         style={{
           backgroundColor: sectionBg,
-          padding: "5rem 1.5rem",
+          padding: "5rem 1.5rem 1.5rem",
           textAlign: "center",
           opacity: picabooRef.inView ? 1 : 0,
           transform: picabooRef.inView ? "translateY(0)" : "translateY(30px)",
