@@ -1,12 +1,4 @@
-/*
- * DESIGN: Underground Punk Zine
- * Carousel component for Picaboo social feed section
- * - Toujours en mode sombre
- * - Navigation clavier (flèches gauche/droite)
- */
-
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface Post {
   id: number;
@@ -19,208 +11,134 @@ interface CarouselSectionProps {
   posts: Post[];
 }
 
+const INTERVAL = 4000;
+
 export default function CarouselSection({ posts }: CarouselSectionProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [fade, setFade] = useState(true);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? posts.length - 1 : prev - 1));
+  const goTo = (index: number) => {
+    setFade(false);
+    setTimeout(() => {
+      setCurrent(index);
+      setFade(true);
+    }, 300);
   };
 
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev === posts.length - 1 ? 0 : prev + 1));
-  };
+  const next = () => goTo((current + 1) % posts.length);
+  const prev = () => goTo((current - 1 + posts.length) % posts.length);
 
-  // Navigation clavier
+  // Autoplay
   useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") goToPrevious();
-      if (e.key === "ArrowRight") goToNext();
-    };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, []);
+    if (paused) return;
+    timerRef.current = setTimeout(next, INTERVAL);
+    return () => { if (timerRef.current) clearTimeout(timerRef.current); };
+  }, [current, paused]);
 
-  const currentPost = posts[currentIndex];
+  // Clavier
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") prev();
+      if (e.key === "ArrowRight") next();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [current]);
+
+  const post = posts[current];
 
   return (
     <div
       role="region"
       aria-label="Galerie d'œuvres"
-      style={{
-        position: "relative",
-        width: "100%",
-        backgroundColor: "rgba(255,255,255,0.05)",
-      }}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      style={{ position: "relative", width: "100%", userSelect: "none" }}
     >
-      {/* Main carousel image */}
-      <div
-        style={{
-          position: "relative",
-          aspectRatio: "16 / 9",
-          overflow: "hidden",
-          backgroundColor: "#000",
-        }}
-      >
+      {/* Image principale */}
+      <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden", backgroundColor: "#000" }}>
         <img
-          src={currentPost.image}
-          alt={currentPost.caption}
+          src={post.image}
+          alt={post.caption}
           style={{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            transition: "opacity 0.5s ease",
+            opacity: fade ? 1 : 0,
+            transition: "opacity 0.3s ease",
           }}
         />
 
-        {/* Overlay with caption */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            background: "linear-gradient(transparent, rgba(0,0,0,0.8))",
-            padding: "2rem 1.5rem 1.5rem",
+        {/* Légende */}
+        <div style={{
+          position: "absolute",
+          bottom: 0, left: 0, right: 0,
+          background: "linear-gradient(transparent, rgba(0,0,0,0.75))",
+          padding: "2rem 1rem 1rem",
+        }}>
+          <p style={{
             color: "white",
-          }}
-        >
-          <p style={{ fontWeight: 600, fontSize: "1rem", marginBottom: "0.5rem" }}>
-            {currentPost.caption}
+            fontFamily: "'Space Grotesk', sans-serif",
+            fontSize: "0.9rem",
+            fontWeight: 600,
+            margin: 0,
+          }}>
+            {post.caption}
           </p>
-          <p style={{ opacity: 0.7, fontSize: "0.875rem" }}>{currentPost.date}</p>
         </div>
 
-        {/* Navigation buttons */}
-        <button
-          onClick={goToPrevious}
-          aria-label="Image précédente"
-          style={{
-            position: "absolute",
-            left: "1rem",
-            top: "50%",
-            transform: "translateY(-50%)",
-            backgroundColor: "rgba(255, 20, 147, 0.7)",
-            border: "none",
-            borderRadius: "50%",
-            width: "44px",
-            height: "44px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            transition: "background-color 0.3s ease",
-            zIndex: 10,
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(255, 20, 147, 1)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(255, 20, 147, 0.7)";
-          }}
-        >
-          <ChevronLeft size={24} color="white" />
-        </button>
-
-        <button
-          onClick={goToNext}
-          aria-label="Image suivante"
-          style={{
-            position: "absolute",
-            right: "1rem",
-            top: "50%",
-            transform: "translateY(-50%)",
-            backgroundColor: "rgba(255, 20, 147, 0.7)",
-            border: "none",
-            borderRadius: "50%",
-            width: "44px",
-            height: "44px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            transition: "background-color 0.3s ease",
-            zIndex: 10,
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(255, 20, 147, 1)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.backgroundColor = "rgba(255, 20, 147, 0.7)";
-          }}
-        >
-          <ChevronRight size={24} color="white" />
-        </button>
-      </div>
-
-      {/* Thumbnail strip */}
-      <div
-        style={{
-          display: "flex",
-          gap: "2px",
-          padding: "0.75rem",
-          backgroundColor: "rgba(255,255,255,0.02)",
-          overflowX: "auto",
-        }}
-      >
-        {posts.map((post, index) => (
+        {/* Boutons discrets */}
+        {[{ fn: prev, side: "left", label: "←" }, { fn: next, side: "right", label: "→" }].map(({ fn, side, label }) => (
           <button
-            key={post.id}
-            onClick={() => setCurrentIndex(index)}
-            aria-label={`Voir : ${post.caption}`}
-            aria-current={index === currentIndex ? "true" : undefined}
+            key={side}
+            onClick={fn}
+            aria-label={label}
             style={{
-              flexShrink: 0,
-              width: "60px",
-              height: "60px",
-              border: index === currentIndex ? "2px solid #FF2D78" : "1px solid rgba(255,255,255,0.2)",
-              borderRadius: "4px",
-              padding: "0",
+              position: "absolute",
+              top: "50%",
+              [side]: "0.75rem",
+              transform: "translateY(-50%)",
+              background: "rgba(0,0,0,0.35)",
+              border: "none",
+              color: "rgba(255,255,255,0.7)",
+              fontSize: "1.1rem",
+              width: "36px",
+              height: "36px",
+              borderRadius: "50%",
               cursor: "pointer",
-              overflow: "hidden",
-              transition: "border-color 0.3s ease",
-              opacity: index === currentIndex ? 1 : 0.6,
-            }}
-            onMouseEnter={(e) => {
-              if (index !== currentIndex)
-                (e.currentTarget as HTMLButtonElement).style.opacity = "0.8";
-            }}
-            onMouseLeave={(e) => {
-              if (index !== currentIndex)
-                (e.currentTarget as HTMLButtonElement).style.opacity = "0.6";
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            <img
-              src={post.image}
-              alt={post.caption}
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
+            {label}
           </button>
         ))}
       </div>
 
-      {/* Indicator dots */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "0.5rem",
-          padding: "0.75rem",
-          backgroundColor: "rgba(255,255,255,0.05)",
-        }}
-      >
-        {posts.map((_, index) => (
+      {/* Dots */}
+      <div style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: "6px",
+        padding: "0.75rem 0",
+      }}>
+        {posts.map((_, i) => (
           <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            aria-label={`Aller à l'image ${index + 1}`}
+            key={i}
+            onClick={() => goTo(i)}
+            aria-label={`Image ${i + 1}`}
             style={{
-              width: index === currentIndex ? "24px" : "8px",
-              height: "8px",
-              borderRadius: "4px",
+              width: i === current ? "20px" : "6px",
+              height: "6px",
+              borderRadius: "3px",
               border: "none",
-              backgroundColor: index === currentIndex ? "#FF2D78" : "rgba(255,255,255,0.3)",
+              backgroundColor: i === current ? "#FF2D78" : "rgba(255,255,255,0.25)",
               cursor: "pointer",
               transition: "all 0.3s ease",
+              padding: 0,
             }}
           />
         ))}
