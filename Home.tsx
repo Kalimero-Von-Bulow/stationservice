@@ -376,6 +376,19 @@ export default function Home() {
           >
             (David Lynch)
           </p>
+
+          {/* Vidéo Miroirs Sélectifs */}
+          <div style={{ marginTop: "2.5rem", borderRadius: "4px", overflow: "hidden" }}>
+            <iframe
+              src="https://dalek.zone/plugins/livechat/router/webchat/room/bbf5d5c3-2f28-473e-ab01-04dedc4c2024?_readonly=noscroll"
+              title="Miroirs Sélectifs"
+              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+              width="100%"
+              height="315"
+              frameBorder="0"
+              style={{ display: "block", border: "none" }}
+            />
+          </div>
         </div>
       </section>
 
