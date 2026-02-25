@@ -269,7 +269,7 @@ export default function Home() {
                 fontFamily: "'Space Grotesk', sans-serif",
               }}
             >
-              ✝ Works
+              🎨 Works
             </a>
           </div>
         </div>
