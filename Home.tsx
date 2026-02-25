@@ -61,9 +61,9 @@ const showcaseProjects = [
     textColor: "black",
   },
   {
-    title: "Nest In Pace",
-    url: "https://nest-in-pace.vercel.app/",
-    description: "Comics project",
+    title: "Works",
+    url: "https://kalimero-works.vercel.app/",
+    description: "Art & Projects",
     bg: "#f5f5f5",
     textColor: "black",
   },
@@ -260,7 +260,7 @@ export default function Home() {
               ⚓ Yam What Yam
             </a>
             <a
-              href="https://nest-in-pace.vercel.app/"
+              href="https://kalimero-works.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-punk"
@@ -270,7 +270,7 @@ export default function Home() {
                 fontFamily: "'Space Grotesk', sans-serif",
               }}
             >
-              ✝ Nest In Pace, Quéméré
+              ✝ Works
             </a>
           </div>
         </div>
