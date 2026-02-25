@@ -25,13 +25,13 @@ const showcaseProjects = [
     image: "/showcase-kalimero-ink.jpg",
   },
   {
-    title: "Book-O-Matics",
+    title: "Shop",
     url: "https://ko-fi.com/kalimero_666/shop",
     description: "Comics & Books",
     image: "/showcase-bookomatics.jpg",
   },
   {
-    title: "PRNGRFX",
+    title: "PRNGRFX Blog",
     url: "https://xxx19.digitalpress.blog/",
     description: "Graphical Erotica / Pornographic Studies",
     image: "/showcase-prngrfx-blog.jpg",
@@ -49,13 +49,13 @@ const showcaseProjects = [
     image: "/showcase-works.jpg",
   },
   {
-    title: "PRNGRFX #01",
+    title: "PRNGRFX Pack",
     url: "https://kalimero666.gumroad.com/l/wqynnc",
     description: "Graphical Erotica — Gumroad",
     image: "/showcase-prngrfx01.jpg",
   },
   {
-    title: "Censored",
+    title: "Censored works",
     url: "https://kalimero666.gumroad.com/l/lkcdl",
     description: "Gumroad",
     image: "/showcase-censored.jpg",
@@ -79,13 +79,13 @@ const socialPosts = [
   {
     id: 2,
     image: "/artwork-2.jpg",
-    caption: "Sérigraphie",
+    caption: "Songwriting",
     date: "Kalimero Von Bülow",
   },
   {
     id: 3,
     image: "/artwork-3.jpg",
-    caption: "Self Portrait",
+    caption: "Joe Strummer",
     date: "Kalimero Von Bülow",
   },
   {
@@ -97,13 +97,13 @@ const socialPosts = [
   {
     id: 5,
     image: "/artwork-5.jpg",
-    caption: "Chronic",
+    caption: "Lollipop",
     date: "Kalimero Von Bülow",
   },
   {
     id: 6,
     image: "/artwork-6.jpg",
-    caption: "Rayon X",
+    caption: "Julie",
     date: "Kalimero Von Bülow",
   },
 ];
@@ -479,10 +479,10 @@ export default function Home() {
                 fontWeight: 700,
               }}
             >
-              @kalimero_666
+              kalimero
             </span>{" "}
             I am{" "}
-            <span style={{ color: "#FF2D78", fontWeight: 700 }}>Kalimero Von Bülow</span>
+            <span style={{ color: "#FF2D78", fontWeight: 700 }}>KALIMERO VON BÜLOW</span>
           </p>
 
           <p
