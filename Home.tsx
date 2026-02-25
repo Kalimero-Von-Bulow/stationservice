@@ -350,7 +350,7 @@ export default function Home() {
       <section
         style={{
           backgroundColor: bgColor,
-          padding: "4rem 1.5rem",
+          padding: "1.5rem 1.5rem 4rem",
           textAlign: "center",
         }}
       >
