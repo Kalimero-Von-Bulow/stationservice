@@ -526,10 +526,10 @@ export default function Home() {
                 justifyContent: "center",
                 minWidth: "280px",
                 height: "120px",
-                backgroundColor: "rgba(255, 45, 120, 0.15)",
-                border: "2px solid #FF2D78",
+                backgroundColor: "#000000",
+                border: "2px solid rgba(255,255,255,0.3)",
                 borderRadius: "4px",
-                color: "#FF2D78",
+                color: "white",
                 textDecoration: "none",
                 fontSize: "1.1rem",
                 fontWeight: 600,
@@ -537,12 +537,12 @@ export default function Home() {
                 cursor: "pointer",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255, 45, 120, 0.25)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.05)";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#FF2D78";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#FF2D78";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255, 45, 120, 0.15)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.3)";
+                (e.currentTarget as HTMLAnchorElement).style.color = "white";
               }}
             >
               Rock, Ghost, Rock !
@@ -557,10 +557,10 @@ export default function Home() {
                 justifyContent: "center",
                 minWidth: "280px",
                 height: "120px",
-                backgroundColor: "rgba(255, 45, 120, 0.15)",
-                border: "2px solid #FF2D78",
+                backgroundColor: "#000000",
+                border: "2px solid rgba(255,255,255,0.3)",
                 borderRadius: "4px",
-                color: "#FF2D78",
+                color: "white",
                 textDecoration: "none",
                 fontSize: "1.1rem",
                 fontWeight: 600,
@@ -568,12 +568,12 @@ export default function Home() {
                 cursor: "pointer",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255, 45, 120, 0.25)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.05)";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#FF2D78";
+                (e.currentTarget as HTMLAnchorElement).style.color = "#FF2D78";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = "rgba(255, 45, 120, 0.15)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)";
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.3)";
+                (e.currentTarget as HTMLAnchorElement).style.color = "white";
               }}
             >
               PRNGRFX
