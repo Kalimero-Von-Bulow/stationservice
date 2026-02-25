@@ -67,6 +67,27 @@ const showcaseProjects = [
     bg: "#f5f5f5",
     textColor: "black",
   },
+  {
+    title: "PRNGRFX #01",
+    url: "https://kalimero666.gumroad.com/l/wqynnc",
+    description: "Graphical Erotica — Gumroad",
+    bg: "#1a1a1a",
+    textColor: "white",
+  },
+  {
+    title: "Censored",
+    url: "https://kalimero666.gumroad.com/l/lkcdl",
+    description: "Gumroad",
+    bg: "#0a0a0a",
+    textColor: "white",
+  },
+  {
+    title: "Art Majeur",
+    url: "https://www.artmajeur.com/olivier-kalimero-quemere",
+    description: "Galerie en ligne",
+    bg: "#f0ede8",
+    textColor: "black",
+  },
 ];
 
 // Social feed — œuvres de Kalimero Von Bülow
