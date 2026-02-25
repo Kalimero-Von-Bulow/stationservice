@@ -638,7 +638,7 @@ export default function Home() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "flex-end",
-                  backgroundColor: project.image ? "#0a0a0a" : (project.bg || "#1a1a1a"),
+                  backgroundColor: "#0a0a0a",
                   backgroundImage: project.image ? `url(${project.image})` : "none",
                   backgroundSize: "cover",
                   backgroundPosition: "center top",
