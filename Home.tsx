@@ -26,13 +26,6 @@ const showcaseProjects = [
     textColor: "white",
   },
   {
-    title: "Ecce Kalimero",
-    url: "https://kalimero.ink/",
-    description: "Ghost blog",
-    bg: "#00BFFF",
-    textColor: "black",
-  },
-  {
     title: "Book-O-Matics",
     url: "https://ko-fi.com/kalimero_666/shop",
     description: "Comics & Books",
@@ -45,13 +38,6 @@ const showcaseProjects = [
     description: "Graphical Erotica / Pornographic Studies",
     bg: "#1a1a1a",
     textColor: "white",
-  },
-  {
-    title: "Kalimero Von Bülow",
-    url: "https://kalimero.ink/",
-    description: "Portfolio & biography",
-    bg: "#f0ede8",
-    textColor: "black",
   },
   {
     title: "Picaboo",
