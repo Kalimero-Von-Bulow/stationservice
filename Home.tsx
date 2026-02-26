@@ -747,26 +747,27 @@ export default function Home() {
               (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.12)";
             }}
           >
-            {/* Image */}
-            <div style={{ overflow: "hidden", aspectRatio: "1/1" }}>
-              <img
-                src="/portrait.jpg"
-                alt="Order Your Portrait"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  objectPosition: "center top",
-                  filter: "grayscale(20%) contrast(1.1)",
-                  transition: "transform 0.4s ease",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.transform = "scale(1.04)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLImageElement).style.transform = "scale(1)";
-                }}
-              />
+            {/* 3 images verticales */}
+            <div style={{ display: "grid", gridTemplateRows: "1fr 1fr 1fr", overflow: "hidden" }}>
+              {["/portrait-preview.jpg", "/portrait-preview-2.jpg", "/portrait-preview-3.jpg"].map((src, i) => (
+                <div key={i} style={{ overflow: "hidden" }}>
+                  <img
+                    src={src}
+                    alt="Portrait par KaliMero"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                      filter: "grayscale(20%) contrast(1.1)",
+                      transition: "transform 0.4s ease",
+                      display: "block",
+                    }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1.05)"; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLImageElement).style.transform = "scale(1)"; }}
+                  />
+                </div>
+              ))}
             </div>
 
             {/* Text */}
