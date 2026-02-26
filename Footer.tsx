@@ -107,7 +107,7 @@ export default function Footer() {
               fontWeight: 600,
             }}
           >
-            tip! Soutenez KaliMero sur Tipeee
+            Soutenez KaliMero sur Tipeee
           </a>
         </div>
 
