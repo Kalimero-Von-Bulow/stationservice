@@ -749,7 +749,7 @@ export default function Home() {
           >
             {/* 3 images verticales */}
             <div style={{ display: "grid", gridTemplateRows: "1fr 1fr 1fr", overflow: "hidden" }}>
-              {["/portrait-preview.jpg", "/portrait-preview-2.jpg", "/portrait-preview-3.jpg"].map((src, i) => (
+              {["/portrait.jpg", "/portrait-preview-2.jpg", "/portrait-preview-3.jpg"].map((src, i) => (
                 <div key={i} style={{ overflow: "hidden" }}>
                   <img
                     src={src}
