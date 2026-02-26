@@ -750,7 +750,7 @@ export default function Home() {
             {/* Image */}
             <div style={{ overflow: "hidden", aspectRatio: "1/1" }}>
               <img
-                src="/portrait-preview.jpg"
+                src="/portrait.jpg"
                 alt="Order Your Portrait"
                 style={{
                   width: "100%",
