@@ -493,7 +493,7 @@ export default function Home() {
                 fontWeight: 700,
               }}
             >
-              @kalimero_666
+              kalimero_666
             </span>{" "}
             I am{" "}
             <span style={{ color: "#FF2D78", fontWeight: 700 }}>Kalimero Von Bülow</span>
