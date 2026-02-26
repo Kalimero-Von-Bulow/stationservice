@@ -10,7 +10,7 @@ const navLinks: NavLink[] = [
   { label: "PRNGRFX", href: "https://xxx19.digitalpress.blog/", external: true },
   { label: "Shop", href: "https://ko-fi.com/kalimero_666/shop", external: true },
   { label: "PRNGRFX #01", href: "https://kalimero666.gumroad.com/l/wqynnc", external: true },
-  { label: "Censored", href: "https://kalimero666.gumroad.com/l/lkcdl", external: true },
+  { label: "Censored Works", href: "https://kalimero666.gumroad.com/l/lkcdl", external: true },
   { label: "Art Majeur", href: "https://www.artmajeur.com/olivier-kalimero-quemere", external: true },
   { label: "Goodies", href: "https://kalimero.myspreadshop.fr/", external: true },
 ];

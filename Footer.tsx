@@ -15,7 +15,7 @@ const socialLinks: FooterLink[] = [
 ];
 
 const supportLinks: FooterLink[] = [
-  { label: "Book-O-Matics", href: "https://ko-fi.com/kalimero_666/shop" },
+  { label: "Shop", href: "https://ko-fi.com/kalimero_666/shop" },
   { label: "Ko-Fi", href: "https://ko-fi.com/kalimero666" },
   { label: "Tipeee", href: "https://www.tipeee.com/kalimero" },
   { label: "Goodies", href: "https://kalimero.myspreadshop.fr/" },

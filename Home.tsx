@@ -25,7 +25,7 @@ const showcaseProjects = [
     image: "/showcase-kalimero-ink.jpg",
   },
   {
-    title: "Book-O-Matics",
+    title: "Shop",
     url: "https://ko-fi.com/kalimero_666/shop",
     description: "Comics & Books",
     image: "/showcase-bookomatics.jpg",
@@ -55,7 +55,7 @@ const showcaseProjects = [
     image: "/showcase-prngrfx01.jpg",
   },
   {
-    title: "Censored",
+    title: "Censored Works",
     url: "https://kalimero666.gumroad.com/l/lkcdl",
     description: "Gumroad",
     image: "/showcase-censored.jpg",
