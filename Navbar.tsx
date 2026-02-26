@@ -7,14 +7,12 @@ const navLinks: NavLink[] = [
   { label: "Picaboo", href: "https://picaboo.vercel.app/", external: true },
   { label: "Works", href: "https://kalimero-works.vercel.app/", external: true },
   { label: "Rock, Ghost, Rock !", href: "https://rockghostsrock.digitalpress.blog/", external: true },
-  { label: "Chronic", href: null, external: false },
-  { label: "Rayon X", href: null, external: false },
   { label: "PRNGRFX", href: "https://xxx19.digitalpress.blog/", external: true },
   { label: "Shop", href: "https://ko-fi.com/kalimero_666/shop", external: true },
   { label: "PRNGRFX #01", href: "https://kalimero666.gumroad.com/l/wqynnc", external: true },
   { label: "Censored", href: "https://kalimero666.gumroad.com/l/lkcdl", external: true },
   { label: "Art Majeur", href: "https://www.artmajeur.com/olivier-kalimero-quemere", external: true },
-  { label: "Goodies", href: null, external: false },
+  { label: "Goodies", href: "https://kalimero.myspreadshop.fr/", external: true },
 ];
 
 const S = {

@@ -5,11 +5,12 @@ interface FooterLink {
 
 const socialLinks: FooterLink[] = [
   { label: "Instagram", href: "https://www.instagram.com/kalimero_____666/" },
-  { label: "Facebook", href: "https://www.facebook.com/kalimero.officiel" },
-  { label: "Youtube", href: "https://www.youtube.com/@kalimero666" },
-  { label: "Pixelfed", href: null },
-  { label: "Peertube", href: null },
-  { label: "Mastodon", href: null },
+  { label: "Facebook", href: "https://facebook.com/kalimero.officiel/" },
+  { label: "Youtube", href: "https://youtube.com/@kalimero_666" },
+  { label: "Mastodon", href: "https://graphics.social/@kalimero" },
+  { label: "Pixelfed", href: "https://pixelfed.fr/kalimero_666" },
+  { label: "Peertube", href: "https://peertube.linuxrocks.online/a/kalimero666/video-channels" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/kalimero666" },
   { label: "...and more →", href: null },
 ];
 
@@ -17,9 +18,8 @@ const supportLinks: FooterLink[] = [
   { label: "Book-O-Matics", href: "https://ko-fi.com/kalimero_666/shop" },
   { label: "Ko-Fi", href: "https://ko-fi.com/kalimero666" },
   { label: "Tipeee", href: "https://www.tipeee.com/kalimero" },
+  { label: "Goodies", href: "https://kalimero.myspreadshop.fr/" },
   { label: "Opensea", href: null },
-  { label: "Patreon", href: null },
-  { label: "Goodies", href: null },
   { label: "...and more →", href: null },
 ];
 
