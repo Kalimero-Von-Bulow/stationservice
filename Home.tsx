@@ -704,7 +704,7 @@ export default function Home() {
                 alignItems: "center",
                 gap: "0.5rem",
                 padding: "0.6rem 1.4rem",
-                backgroundColor: "#FF5E5B",
+                backgroundColor: "#FF2D78",
                 color: "white",
                 textDecoration: "none",
                 fontWeight: 600,
