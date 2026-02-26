@@ -725,6 +725,104 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== ORDER YOUR PORTRAIT ===== */}
+      <section style={{ backgroundColor: "#0a0a0a", padding: "5rem 1.5rem" }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <a
+            href="https://kalimero-portrait.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              textDecoration: "none",
+              border: "1px solid rgba(255,255,255,0.12)",
+              overflow: "hidden",
+              transition: "border-color 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = "#FF2D78";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.12)";
+            }}
+          >
+            {/* Image */}
+            <div style={{ overflow: "hidden", aspectRatio: "1/1" }}>
+              <img
+                src="/portrait-preview.jpg"
+                alt="Order Your Portrait"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  filter: "grayscale(20%) contrast(1.1)",
+                  transition: "transform 0.4s ease",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.transform = "scale(1.04)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLImageElement).style.transform = "scale(1)";
+                }}
+              />
+            </div>
+
+            {/* Text */}
+            <div style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              padding: "2rem 1.8rem",
+              backgroundColor: "#0f0f0f",
+            }}>
+              <p style={{
+                fontSize: "0.6rem",
+                letterSpacing: "0.3em",
+                textTransform: "uppercase",
+                color: "#FF2D78",
+                marginBottom: "1rem",
+                fontFamily: "'Space Mono', monospace",
+              }}>
+                Commandes ouvertes
+              </p>
+              <h3 style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "1.5rem",
+                fontWeight: 700,
+                color: "white",
+                lineHeight: 1.2,
+                marginBottom: "1rem",
+              }}>
+                Order Your Portrait
+              </h3>
+              <p style={{
+                fontSize: "0.82rem",
+                color: "rgba(255,255,255,0.5)",
+                lineHeight: 1.7,
+                marginBottom: "1.5rem",
+                fontFamily: "'Space Grotesk', sans-serif",
+              }}>
+                Encre, feutre, pastel — fait main, rien que pour toi. À partir de 60€.
+              </p>
+              <span style={{
+                display: "inline-block",
+                backgroundColor: "#FF2D78",
+                color: "white",
+                padding: "0.5rem 1.1rem",
+                fontSize: "0.75rem",
+                fontFamily: "'Space Mono', monospace",
+                letterSpacing: "0.08em",
+                width: "fit-content",
+              }}>
+                Commander →
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
       {/* ===== FOOTER ===== */}
       <Footer />
     </div>
