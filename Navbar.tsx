@@ -13,7 +13,7 @@ const navLinks: NavLink[] = [
   { label: "PRNGRFX #01", href: "https://kalimero666.gumroad.com/l/wqynnc", external: true },
   { label: "Art Majeur", href: "https://www.artmajeur.com/olivier-kalimero-quemere", external: true },
   { label: "Goodies", href: "https://kalimero.myspreadshop.fr/", external: true },
-  { label: "Order Your Portrait", href: "https://www.notion.so/Commande-ton-portrait-2efc6f12db2480b4b4bed88fcff659a7", external: true },
+  { label: "Order Your Portrait", href: "https://kalimero-portrait.vercel.app/", external: true },
   { label: "Linktree", href: "https://linktr.ee/kalimero", external: true },
 ];
 
