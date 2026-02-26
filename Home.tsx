@@ -380,13 +380,13 @@ export default function Home() {
           {/* Vidéo Miroirs Sélectifs */}
           <div style={{ marginTop: "2.5rem", borderRadius: "4px", overflow: "hidden" }}>
             <iframe
-              src="https://dalek.zone/videos/embed/pdbUvdbLM6h5xQHfcrFE2b?start=0s&subtitle=fr&title=0&warningTitle=0&peertubeLink=0&p2p=0"
-              title="Miroirs Sélectifs"
-              sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+              src="https://www.youtube.com/embed/MjR1VIjHnwk"
+              title="Vidéo Kalimero"
               width="100%"
               height="315"
               frameBorder="0"
               allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               style={{ display: "block", border: "none" }}
             />
           </div>
