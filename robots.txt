@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kalimero-station-service.vercel.app/sitemap.xml
