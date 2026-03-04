@@ -746,7 +746,7 @@ export default function Home() {
           >
             {/* 3 images verticales */}
             <div style={{ display: "grid", gridTemplateRows: "1fr 1fr 1fr", overflow: "hidden" }}>
-              {["/portrait.jpg", "/portrait-preview-2.jpg", "/portrait-preview-3.jpg"].map((src, i) => (
+              {["/portrait-preview.jpg", "/portrait-preview-2.jpg", "/portrait-preview-3.jpg"].map((src, i) => (
                 <div key={i} style={{ overflow: "hidden" }}>
                   <img
                     src={src}
@@ -783,7 +783,7 @@ export default function Home() {
                 marginBottom: "1rem",
                 fontFamily: "'Space Mono', monospace",
               }}>
-                Commandes ouvertes
+                Open for commissions
               </p>
               <h3 style={{
                 fontFamily: "'Space Grotesk', sans-serif",
@@ -802,7 +802,7 @@ export default function Home() {
                 marginBottom: "1.5rem",
                 fontFamily: "'Space Grotesk', sans-serif",
               }}>
-                Encre, feutre, pastel — fait main, rien que pour toi. À partir de 60€.
+                Ink, felt pen, pastel — handmade, just for you. Starting from 60€.
               </p>
               <span style={{
                 display: "inline-block",
@@ -814,7 +814,7 @@ export default function Home() {
                 letterSpacing: "0.08em",
                 width: "fit-content",
               }}>
-                Commander →
+                Order now →
               </span>
             </div>
           </a>
