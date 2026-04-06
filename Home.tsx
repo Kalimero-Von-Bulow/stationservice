@@ -502,7 +502,7 @@ life <span style={{ color: "#FF2D78", fontWeight: 600 }}>trying</span> things.
                 fontWeight: 700,
               }}
             >
-              @kalimero_666
+              Kalimero_666
             </span>{" "}
             I am{" "}
             <span style={{ color: "#FF2D78", fontWeight: 700 }}>Kalimero Von Bülow</span>
