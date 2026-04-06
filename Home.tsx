@@ -309,10 +309,19 @@ export default function Home() {
             }}
           >
             <span style={{ color: "#FF2D78", fontWeight: 600 }}>Since</span> I got my degree at the
-            famous <span style={{ color: "#FF2D78", fontWeight: 600 }}>ERG</span>, Ecole de Recherche
-            Graphique in <span style={{ color: "#FF2D78", fontWeight: 600 }}>Brüsel</span>, also had
-            to deal with <span style={{ color: "#FF2D78", fontWeight: 600 }}>ADHD</span>, I spent my
-            life <span style={{ color: "#FF2D78", fontWeight: 600 }}>trying</span> things.
+famous{" "}
+<a
+  href="https://boiling-may-c80.notion.site/Olivier-Kalimero-Qu-m-r-dipl-me-de-l-enseignement-sup-rieur-artistique-obtenu-en-1999-l-Ecole--33ac6f12db2480a99743f670b80af902"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{ color: "#0066cc", fontWeight: 600, textDecoration: "underline" }}
+>
+  ERG
+</a>
+, Ecole de Recherche
+Graphique in <span style={{ color: "#FF2D78", fontWeight: 600 }}>Brüsel</span>, also had
+to deal with <span style={{ color: "#FF2D78", fontWeight: 600 }}>ADHD</span>, I spent my
+life <span style={{ color: "#FF2D78", fontWeight: 600 }}>trying</span> things.
           </p>
 
           {/* Social Feed */}
