@@ -24,11 +24,17 @@ const showcaseProjects = [
     description: "Official website",
     image: "/showcase-kalimero-ink.jpg",
   },
-  {
+{
     title: "Shop",
     url: "https://ko-fi.com/kalimero_666/shop",
     description: "Comics & Books",
     image: "/showcase-bookomatics.jpg",
+  },
+  {
+    title: "Let's Rock",
+    url: "https://kalimero-letsrock.vercel.app/grid",
+    description: "Drawings about music and musicians",
+    image: "/showcase-letsrock.jpg",
   },
   {
     title: "PRNGRFX",
