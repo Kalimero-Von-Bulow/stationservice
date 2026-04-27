@@ -4,9 +4,9 @@ interface FooterLink {
 }
 
 const socialLinks: FooterLink[] = [
-  { label: "Instagram", href: "https://www.instagram.com/kalimero_____666/" },
-  { label: "Facebook", href: "https://facebook.com/kalimero.officiel/" },
-  { label: "Youtube", href: "https://youtube.com/@kalimero_666" },
+  { label: "Instagram", href: "https://www.instagram.com/kalimero.ink/" },
+  { label: "Facebook", href: "https://facebook.com/kalimero.ink/" },
+  { label: "Youtube", href: "https://youtube.com/@kalimero_von_bulow" },
   { label: "Mastodon", href: "https://graphics.social/@kalimero" },
   { label: "Pixelfed", href: "https://pixelfed.fr/kalimero_666" },
   { label: "Peertube", href: "https://peertube.linuxrocks.online/a/kalimero666/video-channels" },
