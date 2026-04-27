@@ -55,19 +55,19 @@ const showcaseProjects = [
     image: "/showcase-works.jpg",
   },
   {
-    title: "PRNGRFX #01",
-    url: "https://kalimero666.gumroad.com/l/wqynnc",
-    description: "Graphical Erotica — Gumroad",
-    image: "/showcase-prngrfx01.jpg",
-  },
-  {
     title: "Censored Works",
     url: "https://kalimero666.gumroad.com/l/lkcdl",
     description: "Gumroad",
     image: "/showcase-censored.jpg",
   },
   {
-    title: "Art Majeur",
+    title: "JUST BUY PORN PACKS",
+    url: "https://kalimero666.gumroad.com/l/wqynnc",
+    description: "Graphical Erotica — Gumroad",
+    image: "/showcase-prngrfx01.jpg",
+  },
+  {
+    title: "Buy my Art at Art Majeur",
     url: "https://www.artmajeur.com/olivier-kalimero-quemere",
     description: "Galerie en ligne",
     image: "/showcase-artmajeur.jpg",
@@ -508,7 +508,7 @@ life <span style={{ color: "#FF2D78", fontWeight: 600 }}>trying</span> things.
                 fontWeight: 700,
               }}
             >
-              Kalimero_666
+              Kalimero
             </span>{" "}
             I am{" "}
             <span style={{ color: "#FF2D78", fontWeight: 700 }}>Kalimero Von Bülow</span>
