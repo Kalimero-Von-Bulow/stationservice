@@ -538,10 +538,10 @@ export default function Home() {
               rel="noopener noreferrer"
               style={{ color: "#FF2D78", textDecoration: "none", fontWeight: 600 }}
             >
-              Ghost blog
+              Ghost blog 
             </a>
-            ! and buy my{" "}
-            <span style={{ color: "#FF2D78", fontWeight: 600 }}>Porn Packs</span> :
+             ! and have a look on my{" "}
+            <span style={{ color: "#FF2D78", fontWeight: 600 }}>Porno one</span> :
           </p>
 
           {/* Project rectangles */}
