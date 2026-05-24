@@ -5,7 +5,8 @@ type NavLink = { label: string; href: string | null; external: boolean };
 const navLinks: NavLink[] = [
   { label: "Yam What Yam", href: "https://yamwhatyam.vercel.app/", external: true },
   { label: "Works", href: "https://kalimero-works.vercel.app/", external: true },
-  { label: "Shop", href: "https://ko-fi.com/kalimero_666/shop", external: true },
+  { label: "SHOP", href: "https://ko-fi.com/kalimero_666/shop", external: true },
+  { label: "Let's Rock", href: "https://kalimero-letsrock.vercel.app/grid", external: true },
   { label: "Picaboo", href: "https://picaboo.vercel.app/", external: true },
   { label: "Rock, Ghost, Rock !", href: "https://rockghostsrock.digitalpress.blog/", external: true },
   { label: "PRNGRFX", href: "https://sxssxxsssxxx.blogspot.com/", external: true },
