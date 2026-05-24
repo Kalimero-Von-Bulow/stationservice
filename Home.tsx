@@ -540,8 +540,8 @@ export default function Home() {
             >
               Ghost blog
             </a>
-            ! and buy my{" "}
-            <span style={{ color: "#FF2D78", fontWeight: 600 }}>Porn Packs</span> :
+            ! and check my{" "}
+            <span style={{ color: "#FF2D78", fontWeight: 600 }}>Porno one</span> :
           </p>
 
           {/* Project rectangles */}
