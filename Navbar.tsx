@@ -4,15 +4,14 @@ type NavLink = { label: string; href: string | null; external: boolean };
 
 const navLinks: NavLink[] = [
   { label: "Yam What Yam", href: "https://yamwhatyam.vercel.app/", external: true },
-  { label: "Picaboo", href: "https://picaboo.vercel.app/", external: true },
   { label: "Works", href: "https://kalimero-works.vercel.app/", external: true },
+  { label: "Shop", href: "https://ko-fi.com/kalimero_666/shop", external: true },
+  { label: "Picaboo", href: "https://picaboo.vercel.app/", external: true },
   { label: "Rock, Ghost, Rock !", href: "https://rockghostsrock.digitalpress.blog/", external: true },
   { label: "PRNGRFX", href: "https://sxssxxsssxxx.blogspot.com/", external: true },
-  { label: "Shop", href: "https://ko-fi.com/kalimero_666/shop", external: true },
   { label: "Censored Works", href: "https://kalimero666.gumroad.com/l/wqynnc", external: true },
   { label: "PORN PACKS", href: "https://kalimero666.gumroad.com/l/lkcdl", external: true },
   { label: "Art Majeur", href: "https://www.artmajeur.com/olivier-kalimero-quemere", external: true },
-  { label: "Goodies", href: "https://kalimero.myspreadshop.fr/", external: true },
   { label: "Order Your Portrait", href: "https://kalimero-portrait.vercel.app/", external: true },
   { label: "Linktree", href: "https://linktr.ee/kalimero", external: true },
 ];
