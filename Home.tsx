@@ -25,7 +25,7 @@ const showcaseProjects = [
     image: "/showcase-kalimero-ink.jpg",
   },
   {
-    title: "Shop",
+    title: "SHOP",
     url: "https://ko-fi.com/kalimero_666/shop",
     description: "Comics & Books",
     image: "/showcase-bookomatics.jpg",
@@ -35,12 +35,6 @@ const showcaseProjects = [
     url: "https://kalimero-letsrock.vercel.app/grid",
     description: "Drawings about music and musicians",
     image: "/showcase-letsrock.jpg",
-  },
-  {
-    title: "PRNGRFX",
-    url: "https://sxssxxsssxxx.blogspot.com/",
-    description: "Graphical Erotica / Pornographic Studies",
-    image: "/showcase-prngrfx-blog.jpg",
   },
   {
     title: "Picaboo",
@@ -55,7 +49,13 @@ const showcaseProjects = [
     image: "/showcase-works.jpg",
   },
   {
-    title: "BUY PORN PACKS",
+    title: "PRNGRFX",
+    url: "https://sxssxxsssxxx.blogspot.com/",
+    description: "Graphical Erotica / Pornographic Studies",
+    image: "/showcase-prngrfx-blog.jpg",
+  },
+  {
+    title: "PORN PACKS",
     url: "https://kalimero666.gumroad.com/l/lkcdl",
     description: "Gumroad",
     image: "/showcase-censored.jpg",
