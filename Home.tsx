@@ -38,7 +38,7 @@ const showcaseProjects = [
   },
   {
     title: "PRNGRFX",
-    url: "https://xxx19.digitalpress.blog/",
+    url: "https://sxssxxsssxxx.blogspot.com/",
     description: "Graphical Erotica / Pornographic Studies",
     image: "/showcase-prngrfx-blog.jpg",
   },
@@ -55,19 +55,19 @@ const showcaseProjects = [
     image: "/showcase-works.jpg",
   },
   {
-    title: "Censored Works",
+    title: "BUY PORN PACKS",
     url: "https://kalimero666.gumroad.com/l/lkcdl",
     description: "Gumroad",
     image: "/showcase-censored.jpg",
   },
   {
-    title: "JUST BUY PORN PACKS",
+    title: "Censored Works",
     url: "https://kalimero666.gumroad.com/l/wqynnc",
     description: "Graphical Erotica — Gumroad",
     image: "/showcase-prngrfx01.jpg",
   },
   {
-    title: "Buy my Art at Art Majeur",
+    title: "Art Majeur",
     url: "https://www.artmajeur.com/olivier-kalimero-quemere",
     description: "Galerie en ligne",
     image: "/showcase-artmajeur.jpg",
