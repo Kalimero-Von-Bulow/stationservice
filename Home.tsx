@@ -62,7 +62,7 @@ const showcaseProjects = [
   },
   {
     title: "Censored Works",
-    url: "https://kalimero666.gumroad.com/l/wqynnc",
+    url: "https://kalimero666.gumroad.com/l/uncensored/",
     description: "Graphical Erotica — Gumroad",
     image: "/showcase-prngrfx01.jpg",
   },
