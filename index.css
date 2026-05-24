@@ -247,3 +247,8 @@
     }
   }
 }
+/* Forcer la hauteur de l'iframe injectée par Gumroad */
+.gumroad-product-embed iframe {
+  height: 200px !important;
+  max-height: 200px !important;
+}
