@@ -416,20 +416,31 @@ export default function Home() {
           >
             (David Lynch)
           </p>
-
-          {/* Vidéo Miroirs Sélectifs */}
-          <div style={{ marginTop: "2.5rem", borderRadius: "4px", overflow: "hidden" }}>
-            <iframe
-              src="https://www.youtube.com/embed/MjR1VIjHnwk"
-              title="Vidéo Kalimero"
-              width="100%"
-              height="420"
-              frameBorder="0"
-              allowFullScreen
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              style={{ display: "block", border: "none" }}
-            />
-          </div>
+          
+          {/* Vidéo biographique — Sympathy for the Devil */}
+<div
+  style={{
+    marginTop: "2.5rem",
+    borderRadius: "4px",
+    overflow: "hidden",
+    width: "100%",
+    aspectRatio: "16 / 9",
+  }}
+>
+  <iframe
+    src="https://www.youtube.com/embed/MjR1VIjHnwk"
+    title="Sympathy for the Devil"
+    frameBorder="0"
+    allowFullScreen
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    style={{
+      display: "block",
+      border: "none",
+      width: "100%",
+      height: "100%",
+    }}
+  />
+</div>
         </div>
       </section>
 
